@@ -8,15 +8,75 @@ padding: 0%;
     margin-left: 30px;
 }
 
+#cesta div {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: #000000 1px solid;
+}
+
+#masMenos {
+    width: 30px;
+    margin: 5px;
+    color: #090909;
+    border-radius: 0.4em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #ffffff;
+}
+
+#masMenos button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+                inset -4px -4px 12px #ffffff;
+   }
+
 #cesta{
-    position: fixed;
+    width: 250px;
+    position: absolute;
     background-color: white;
-    padding: 40px;
+    padding: 30px;
     border-radius: 6px;
     right: 10px;
     top: 80.95px;
     z-index: 1;
     display: none;
+    margin-left: 10px;
+}
+ 
+#bagsCesta{
+    width: 98px;
+  right: 10px;
+}
+
+#quitar{
+    width: 70px;
+    margin: 5px;
+    color: #000000;
+    border-radius: 0.4em;
+    background: #ff0000;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #ffffff;
+        margin-left: 5px;
+        margin-top: 10px;
+}
+
+#deleteAllIn{
+    width: 70px;
+    margin: 5px;
+    color: #000000;
+    border-radius: 0.4em;
+    background: #ff0000;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #ffffff;
+        margin-left: 5px;
+        margin-top: 10px;
 }
 
 .phone-code {
@@ -90,6 +150,16 @@ header li a {
     border: none;
     border-radius: 4px;
     color: white;
+}
+
+.submit{
+    text-decoration: none;
+    background-color:#2A5B45B3;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    width: 100px;
 }
 
 .add:hover{
@@ -432,7 +502,8 @@ section {
 }
 
 #section5-on {
-    margin: 20% 0px;
+    margin: 20%;
+    margin-left: 40px;
 }
 
 .section5.in h2 {
@@ -555,7 +626,7 @@ margin-top: 10px;
 }
 
 .help{
-    width: 635px;
+    width: 730px;
     height: 120px;
     padding-bottom: 100px;
     border: solid 1px #D1D5DB;
@@ -574,7 +645,7 @@ margin-top: 10px;
 }
 
 #country input {
-    width: 558px;
+    width: 650px;
     border-radius: 6px;
     border: #D1D5DB solid 1px;
     padding-left: 5px;
@@ -681,6 +752,7 @@ margin: 50px 80px;
     text-decoration: none;
 list-style: none;
 color: white;
+display: block;
 }
 
 #footer-feet{

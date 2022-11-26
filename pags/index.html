@@ -16,7 +16,7 @@
 </head>
 
 <body class="container">
-<ul id="cesta"></ul>
+    <div id="cesta"></div>
     <header>
         <div id="moveToR">
             <img src="../img/cafedealtura.com.png" alt="Logotipo">
@@ -40,11 +40,11 @@
                 <a id="inicio" href="../pags/index.html">Iniciar sesión</a>
             </div>
         </div>
-        
-    <button class="cestabtn" id="cart">
+
+        <button class="cestabtn" id="cart">
             <img id="prueba2" src="../img/handbag.svg" alt="handbag">
         </button>
-        
+
     </header>
 
     <main>
@@ -53,9 +53,11 @@
                 <div id="margins">
                     <h5 id="planta-taza"><b>De la planta a tu taza</b></h5>
                     <h1 id="best-coffe"><b>El mejor café del mundo, ahora en tu casa.</b></h1>
-                    <p id="moveUp">Trabajamos con agricultores de todo el mundo para seleccionar los mejores granos de café y que puedas viajar desde la comodidad de tu hogar.</p>
+                    <p id="moveUp">Trabajamos con agricultores de todo el mundo para seleccionar los mejores granos de
+                        café y que puedas viajar desde la comodidad de tu hogar.</p>
                     <div id="marginBt"><a class="descubrimiento" href="#">Descubrir orígenes</a>
-                    <a class="Comprar" href="#">Comprar Café</a></div>
+                        <a class="Comprar" href="#">Comprar Café</a>
+                    </div>
                 </div>
             </div>
             <div class="col-6">
@@ -103,7 +105,7 @@
             </div>
         </section>
 
-        <section class="section3"> 
+        <section class="section3">
             <h2>Novedades</h2>
             <div class="row box-bag">
                 <div class="col-3 box-3">
@@ -118,7 +120,7 @@
                     <img src="../img/Images.png" alt="bag">
                     <p><b>Colombia Los Naranjos</b></p>
                     <p>9,00€</p>
-                    <div >
+                    <div>
                         <button class="add" id="btnNaranjos" onclick="newCoffe(this)">Añadir</button>
                     </div>
                 </div>
@@ -126,7 +128,7 @@
                     <img src="../img/Images (2).png" alt="bag">
                     <p><b>Laos Amanecer</b></p>
                     <p>9,00€</p>
-                    <div >
+                    <div>
                         <button class="add" id="btnLaos" onclick="newCoffe(this)">Añadir</button>
                     </div>
                 </div>
@@ -263,11 +265,8 @@
                         </div>
                         <br>
                         <label for="radio"></label>
-                        <input type="checkbox" name="radio" id=""> Acepto la <a id="grey" href="#"><b>Política de
-                                Privacidad</b><a> y los <a id="grey" href="#"><b>Términos y condiciones.</b></a>
-                                <div id="button4-1">
-                                    <a id="button4" href="">Enviar</a>
-                                </div>
+                        <input type="checkbox" name="radio" id="checkBox" > Acepto la Política de Privacidad y los Términos y condiciones. <br><br>
+                        <button class="submit">Enviar</button>
                     </section>
                 </form>
             </div>
@@ -288,7 +287,7 @@
             </div>
             <div class="col-2" class="list-footer">
                 <ul class="move">
-                    <a class="colorToA"  href="">Tienda</a>
+                    <a class="colorToA" href="">Tienda</a>
                     <a class="colorToA" href="">Suscripción</a>
                     <a class="colorToA" href="">Para Empresas</a>
                     <a class="colorToA" href="">Sobre nosotros</a>
@@ -297,8 +296,8 @@
             </div>
             <div class="col-2" class="footer2">
                 <ul>
-                    <a class="colorToA" href="">Política de privacidad</a>
-                    <a class="colorToA" href="">Política de cookies</a>
+                    <a class="colorToA" href="">Política de privacidad</a><br>
+                    <a class="colorToA" href="">Política de cookies</a><br>
                     <a class="colorToA" href="">Términos y condiciones</a>
                 </ul>
             </div>
@@ -307,6 +306,7 @@
     <div id="footer-feet">
         <p id="copyr">Toos los derechos reservados - Café de Altura SL - 2022</p>
     </div>
+    <script src="../JS/validations.js"></script>
     <script src="../JS/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
