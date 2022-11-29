@@ -5,7 +5,10 @@ padding: 0%;
 
 .cestabtn{
     background-color: #2B2A2B;
-    margin-left: 30px;
+    margin-left: 100px;
+    width: 70px;
+    border-style: none;
+    height: 50px;
 }
 
 #cesta div {
@@ -34,7 +37,7 @@ padding: 0%;
    }
 
 #cesta{
-    width: 250px;
+    width: 400px;
     position: absolute;
     background-color: white;
     padding: 30px;
@@ -44,19 +47,19 @@ padding: 0%;
     z-index: 1;
     display: none;
     margin-left: 10px;
+    
 }
  
 #bagsCesta{
-    width: 98px;
-  right: 10px;
+    width: 92px;
 }
 
 #quitar{
     width: 70px;
     margin: 5px;
-    color: #000000;
+    color: #ffffff;
     border-radius: 0.4em;
-    background: #ff0000;
+    background: #2A5B45;
     border: 1px solid #e8e8e8;
     transition: all .3s;
     box-shadow: 6px 6px 12px #c5c5c5,
@@ -66,17 +69,17 @@ padding: 0%;
 }
 
 #deleteAllIn{
-    width: 70px;
+    width: 125px;
     margin: 5px;
-    color: #000000;
+    color: #ffffff;
     border-radius: 0.4em;
-    background: #ff0000;
+    background: #2A5B45;
     border: 1px solid #e8e8e8;
     transition: all .3s;
     box-shadow: 6px 6px 12px #c5c5c5,
         -6px -6px 12px #ffffff;
         margin-left: 5px;
-        margin-top: 10px;
+        margin-top: -10px;
 }
 
 .phone-code {
@@ -767,6 +770,10 @@ display: block;
     color: white; 
 text-align: center;
 
+}
+
+.inicio{
+    margin-top: 5px;
 }
 
 .buttons a{

@@ -86,8 +86,10 @@ function noDuplicates1() {
     })
 
     noDuplicates.forEach(e => {
-        cesta.innerHTML += `<div id="compra"><h4>${e.name}</h4><br>${e.img} <button id="masMenos">+</button>${e.quantity}<button id="masMenos"  onclick="rest(this)">-</button> <button id="quitar" onclick="deleteNote(this)">Quitar</button> <br> <p>Total: ${e.price * e.quantity}€</p> <button id="deleteAllIn" onclick="deleteAllIn(this)">Vaciar cesta</button>`
+        cesta.innerHTML += `<div <h4>${e.name}</h4><br>${e.img} <button id="masMenos" onclick="newCoffe(this)">+</button>${e.quantity}<button id="masMenos" onclick="minus(this)">-</button> <button id="quitar" onclick="deleteNote(this)">Quitar</button> <br> <p>Total: ${e.price * e.quantity}€</p> `
     })
+
+    cesta.innerHTML += `<button id="deleteAllIn" onclick="deleteAllIn(this)">Vaciar cesta</button> `
 
     coffeStorage = noDuplicates
     localStorage.setItem('cart', JSON.stringify(coffeStorage))
@@ -107,9 +109,7 @@ cart.onclick = (e) => {
     }
 }
 
-
-
-/////Boton de borrar seleccion completa
+/////Boton de borrar seleccion 
 
 const deleteNote = (btn) => {
     let noteToErase = btn.parentNode
@@ -117,17 +117,13 @@ const deleteNote = (btn) => {
     coffeStorage.splice(index, 1)
     localStorage.setItem('cart', JSON.stringify(coffeStorage))
     noteToErase.remove()
-    console.log("dentro");
 }
 
 /////////////VACIAR LA CESTA ENTERA
-const deleteAllIn = (btn) => {
-    
+const deleteAllIn = () => {
     coffeStorage = []
     localStorage.setItem('cart',JSON.stringify(coffeStorage))
     cesta.innerHTML = ' '
-    
      }
  
 
-//

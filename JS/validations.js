@@ -3,7 +3,6 @@ let nameInput = document.querySelector('#username')
 let emailInput = document.querySelector('#email')
 let tlfInput = document.querySelector('#tel')
 
-
 const formValidation = (e) => {
     e.preventDefault()
     if (!nameInput.value) {
@@ -14,7 +13,7 @@ const formValidation = (e) => {
 
     function validateEmail(email) {
         let validate = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        return validate.test(email) ? true : false;
+        return validate.test(email)
     }
 
     if (!validateEmail(emailInput.value)) {
