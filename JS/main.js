@@ -50,23 +50,23 @@ const newCoffe = (button) => {
         case tarrazú:
             product[0].quantity++
             coffeStorage.push(product[0])
-            localStorage.setItem('cart', JSON.stringify(coffeStorage))
+            btnDeletes.style.display = "block"
 
             break;
         case losNaranjos:
             product[1].quantity++
             coffeStorage.push(product[1])
-            localStorage.setItem('cart', JSON.stringify(coffeStorage))
+            btnDeletes.style.display = "block"
             break;
         case laosAmanecer:
             product[2].quantity++
             coffeStorage.push(product[2])
-            localStorage.setItem('cart', JSON.stringify(coffeStorage))
+            btnDeletes.style.display = "block"
             break;
         case etiopíaYrgacheff:
             product[3].quantity++
             coffeStorage.push(product[3])
-            localStorage.setItem('cart', JSON.stringify(coffeStorage))
+            btnDeletes.style.display = "block"
             break;
         default:
             break;
@@ -86,13 +86,27 @@ function noDuplicates1() {
     })
 
     noDuplicates.forEach(e => {
-        cesta.innerHTML += `<div <h4>${e.name}</h4><br>${e.img} <button id="masMenos" onclick="newCoffe(this)">+</button>${e.quantity}<button id="masMenos" onclick="minus(this)">-</button> <button id="quitar" onclick="deleteNote(this)">Quitar</button> <br> <p>Total: ${e.price * e.quantity}€</p> `
+        cesta.innerHTML += `<div <h4>${e.name}</h4><br>${e.img} <div id="buttonsJava">${e.idProduct} <button onclick="sumCar(this)" id="masMenos">+</button>${e.quantity}<button onclick="restCar(this)" id="masMenos">-</button> </div><button id="quitar" onclick="deleteNote(this)">Quitar</button> <br> <p>Total: ${e.price * e.quantity}€</p> `
     })
 
-    cesta.innerHTML += `<button id="deleteAllIn" onclick="deleteAllIn(this)">Vaciar cesta</button> `
+    noDuplicates.forEach(e => {
+        if (e.quantity === 0) {
+            noDuplicates.splice(noDuplicates.indexOf(e), 1)
+        }
+    })
 
+    if (noDuplicates.length <= 0) {
+        btnDeletes.style.display = "none"
+        cesta.innerHTML = "<p> Su cesta está vacia </p>"
+    }
+
+    // if (deleteNote.length <= 0){
+    //     btnDeletes.style.display = "none"
+    //     cesta.innerHTML = "<p> Su cesta está vacia </p>"
+    // }
     coffeStorage = noDuplicates
     localStorage.setItem('cart', JSON.stringify(coffeStorage))
+
 }
 
 // Hacemos la variable 'cart' seleccionamos y le ponemos el evento onclick para cuando no se vea la cesta se muestre y cuando se vea se oculte al pinchar el logo de la cesta.
@@ -102,10 +116,10 @@ const cart = document.querySelector("#cart")
 cart.onclick = (e) => {
     e.preventDefault()
 
-    if (cesta.style.display === "none") {
-        cesta.style.display = "block"
+    if (cart2.style.display === "none") {
+        cart2.style.display = "block"
     } else {
-        cesta.style.display = "none"
+        cart2.style.display = "none"
     }
 }
 
@@ -120,10 +134,68 @@ const deleteNote = (btn) => {
 }
 
 /////////////VACIAR LA CESTA ENTERA
-const deleteAllIn = () => {
-    coffeStorage = []
-    localStorage.setItem('cart',JSON.stringify(coffeStorage))
-    cesta.innerHTML = ' '
-     }
- 
+const btnDeletes = document.querySelector("#btnDeletes")
+btnDeletes.onclick = (e) => {
+    e.preventDefault()
 
+    coffeStorage.forEach(e => {
+        e.quantity = 0
+    })
+    noDuplicates1()
+
+    btnDeletes.style.display = "none"
+    cesta.innerHTML = "<p>Su cesta está vacia</p>"
+
+}
+/////////////////////
+const restCar = (btn) => {
+    let restCest = btn.parentNode.textContent
+    let result = [...restCest][0]
+    coffeStorage.forEach(e => {
+        if (result[0] == '1') {
+            if (product[0].quantity === 0) {
+                return
+            }
+            product[0].quantity--
+        }
+        if (result[0] == '2') {
+            if (product[1].quantity === 0) {
+                return
+            }
+            product[1].quantity--
+        }
+        if (result[0] == '3') {
+            if (product[2].quantity === 0) {
+                return
+            }
+            product[2].quantity--
+        }
+        if (result[0] == '4') {
+            if (product[3].quantity === 0) {
+                return
+            }
+            product[3].quantity--
+        }
+    })
+    noDuplicates1()
+}
+// //////////////////////
+const sumCar = (btn) => {
+    let sumCest = btn.parentNode.textContent
+    let resultSum = [...sumCest][0]
+    coffeStorage.forEach(e => {
+        if (resultSum[0] == '1') {
+            product[0].quantity++
+        }
+        if (resultSum[0] == '2') {
+            product[1].quantity++
+        }
+        if (resultSum[0] == '3') {
+            product[2].quantity++
+        }
+        if (resultSum[0] == '4') {
+            product[3].quantity++
+        }
+    })
+    noDuplicates1()
+}
