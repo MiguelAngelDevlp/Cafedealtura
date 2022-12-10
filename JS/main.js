@@ -147,7 +147,7 @@ btnDeletes.onclick = (e) => {
     cesta.innerHTML = "<p>Su cesta está vacia</p>"
 
 }
-/////////////////////
+///////////////////// Boton de restar
 const restCar = (btn) => {
     let restCest = btn.parentNode.textContent
     let result = [...restCest][0]
@@ -179,7 +179,7 @@ const restCar = (btn) => {
     })
     noDuplicates1()
 }
-// //////////////////////
+// ////////////////////// Boton de sumar
 const sumCar = (btn) => {
     let sumCest = btn.parentNode.textContent
     let resultSum = [...sumCest][0]
