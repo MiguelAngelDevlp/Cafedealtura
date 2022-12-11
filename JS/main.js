@@ -86,7 +86,7 @@ function noDuplicates1() {
     })
 
     noDuplicates.forEach(e => {
-        cesta.innerHTML += `<div <h4>${e.name}</h4><br>${e.img} <div id="buttonsJava">${e.idProduct} <button onclick="sumCar(this)" id="masMenos">+</button>${e.quantity}<button onclick="restCar(this)" id="masMenos">-</button> </div><button id="quitar" onclick="deleteNote(this)">Quitar</button> <br> <p>Total: ${e.price * e.quantity}€</p> `
+        cesta.innerHTML += `<div <h4>${e.name}</h4><br>${e.img} <div id="buttonsJava"><span id="invisible">${e.idProduct}</span><button onclick="sumCar(this)" id="masMenos">+</button>${e.quantity}<button onclick="restCar(this)" id="masMenos">-</button> </div><button id="quitar" onclick="deleteNote(this)">Quitar</button> <br> <p id="border-bottom">Total: ${e.price * e.quantity}€</p> `
     })
 
     noDuplicates.forEach(e => {
@@ -145,13 +145,11 @@ btnDeletes.onclick = (e) => {
 
     btnDeletes.style.display = "none"
     cesta.innerHTML = "<p>Su cesta está vacia</p>"
-
 }
 ///////////////////// Boton de restar
 const restCar = (btn) => {
     let restCest = btn.parentNode.textContent
-    let result = [...restCest][0]
-    coffeStorage.forEach(e => {
+    let result = [...restCest]
         if (result[0] == '1') {
             if (product[0].quantity === 0) {
                 return
@@ -176,14 +174,13 @@ const restCar = (btn) => {
             }
             product[3].quantity--
         }
-    })
+    
     noDuplicates1()
 }
 // ////////////////////// Boton de sumar
 const sumCar = (btn) => {
     let sumCest = btn.parentNode.textContent
-    let resultSum = [...sumCest][0]
-    coffeStorage.forEach(e => {
+    let resultSum = [...sumCest]
         if (resultSum[0] == '1') {
             product[0].quantity++
         }
@@ -196,6 +193,6 @@ const sumCar = (btn) => {
         if (resultSum[0] == '4') {
             product[3].quantity++
         }
-    })
+    
     noDuplicates1()
 }

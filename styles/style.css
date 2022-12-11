@@ -15,12 +15,13 @@ padding: 0%;
     margin-bottom: 15px;
     margin-top: 10px;
     padding-bottom: 15px;
-    border-bottom: #000000 1px solid;
+    width: auto;
+    display: contents;
 }
 
 #masMenos {
     width: 30px;
-    margin: 5px;
+    margin: 12px;
     color: #090909;
     border-radius: 0.4em;
     background: #e8e8e8;
@@ -57,7 +58,9 @@ padding: 0%;
 }
  
 #bagsCesta{
-    width: 92px;
+    width: 102px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 #quitar{
@@ -70,7 +73,7 @@ padding: 0%;
     transition: all .3s;
     box-shadow: 6px 6px 12px #c5c5c5,
         -6px -6px 12px #ffffff;
-        margin-left: 5px;
+        margin-left: 20px;
         margin-top: 10px;
 }
 
@@ -515,6 +518,9 @@ section {
     margin: 20%;
     margin-left: 40px;
 }
+ #invisible{
+    color: white;
+ }
 
 .section5.in h2 {
     width: 330px;
@@ -633,6 +639,10 @@ margin-top: 10px;
 
 .section7-in{
     padding: 50px 48px;
+}
+
+#border-bottom{
+    border-bottom: #000000 1px solid;
 }
 
 .help{
