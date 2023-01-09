@@ -52,6 +52,18 @@ padding: 0%;
     margin-left: 25px;
 }
 
+
+#cestaCesta4{
+    margin-top: 5px;
+    display: flex;
+    position: relative;
+    margin-left: 100px;
+    justify-content: center;
+    width: 1700px;
+    background: rgba(227, 222, 215, 0.3);
+    border-radius: 6px;
+       }
+
 #cestaCesta3{
 margin-top: 5px;
     display: flex;
@@ -211,6 +223,16 @@ header li a {
 
 #color-white {
     color: white;
+}
+#adddd{
+    text-decoration: none;
+    background: #2A5B45;
+
+    padding: 10px;
+    border: none;
+   border-radius: 15px;
+    color: white;
+    margin-left: 48%;
 }
 
 #addd{
@@ -509,6 +531,19 @@ section {
     margin-left: 45%;
 }
 
+#margennn{
+    margin-left: 35%;
+}
+
+#margennn p{
+    width: 100px;
+    text-align: center;
+}
+
+#margennnn{
+   text-align: center;
+}
+
 
 .sectionCheck{
     
@@ -529,7 +564,7 @@ section {
     height: 550px;
     display:inline-table;
     padding: 20px;
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
     
     

@@ -60,12 +60,12 @@
                     <h4 class="blacK">Seleccionar método de pago</h4>
                     <br>
 
-                    <div>
-                        <div id="radioCest">
+                    <div class="section7">
+                        <div id="radioCest" class="section7">
                             <input type="radio" name="cesta">
                             <b id="margenes">Tarjeta de débito</b>
                             <p id="margenes2">Opción estándar sin eguimiento</p>
-                            <p id="namesChe">Titular</p> 
+                            <label for="username" class="form-label">Titular</label><br>
                             <input type="text" placeholder="Nombre del titular">
                             <p namesChe>Número de la tarjeta</p>
                             <input type="text" placeholder="1234 1234 1234 1234">
@@ -98,8 +98,8 @@
                         <p id="namesChe">Apellidos</p>
                         <input type="text">
                         <p id="namesChe">Teléfono</p>
-                        <input type="text" placeholder="+34 600 600 600">
-                        <p id="namesChe">Email</p>
+                        <input type="tel" id="tel" name="tel" placeholder="+1 (555) 987-6543" maxlength="16">
+                        <label for="email" class="form-label">Email</label>
                         <input type="text">
                         <p id="namesChe">Pais</p>
 
@@ -167,6 +167,7 @@
         <p id="copyr">Toos los derechos reservados - Café de Altura SL - 2022</p>
     </div>
     <script src="../JS/checkout.js"></script>
+    <script src="../JS/validations.js"></script>
 </body>
 
 </html>

@@ -17,7 +17,11 @@
         display: flex;
     }
 
-
+#margenesTotal{
+    margin-left: 1450px;
+    margin-top: 5px;
+    position: absolute;
+}
     
 header ul {
     display: inline-flex;
@@ -84,6 +88,15 @@ header li a {
     margin-left: 40px;
 }
 
+#productsP{
+    margin-top: 500px; 
+    margin: 0;
+    top: 100px;
+    width: 0px;
+    
+}
+
+
 #productsCh{
     margin-top: 500px; 
     margin: 0;
@@ -136,8 +149,10 @@ header li a {
 }
 
 #priceCestC{
-    
     font-size: 22px;
+    position: relative;
+    top: 25px;
+    /* font-size: 22px; */
 }
 
 #priceCest{

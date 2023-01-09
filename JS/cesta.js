@@ -8,7 +8,11 @@ function productsCest(text) {
     let totalProducts = 0
 
     products.innerHTML = ``
-
+    let cart3 = document.createElement("div")
+    cart3.setAttribute("id", "margenesTotal")
+    cart3.innerHTML = `<div><h4>Total del carrito</h4></div>`
+    products.appendChild(cart3)
+    
     coffeStorage.forEach(element => {
 // console.log(element);
         let wrapper = document.createElement("div")
@@ -36,6 +40,7 @@ function productsCest(text) {
 
     })
 
+    
     coffeStorage.forEach(element => {
 
         let cart2 = document.createElement("div")

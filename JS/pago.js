@@ -11,33 +11,25 @@ const products = document.getElementById("productsCh")
 function productsCest(text) {
     
     products.innerHTML = ``
-    let cart3 = document.createElement("div")
-    cart3.setAttribute("id", "margenesTotal")
-    cart3.innerHTML = `<div><h4>Total del carrito</h4></div>`
-    products.appendChild(cart3)
     
-
+   
     coffeStorage.forEach(element => {
 
         let cart2 = document.createElement("div")
-        cart2.setAttribute("id", "cestaCesta3")
-        // let cart3 = document.createElement("div")
-        // cart3.setAttribute("id", "margenes3")
-        // cart3.innerHTML = `<div><h4>Total del carrito</h4></div>`
+        cart2.setAttribute("id", "cestaCesta4")
         cart2.innerHTML = `
-        <div>
+        <div class="borderBottom">
         
-
-    
-        <b><p id="priceCestC">Subtotal:    ${element.quantity * element.price},00€</p></b>
-        <p>Envío:</p>
-       
-        <a id="addd" href="../pags/pago.html">Pagar y realizar pedido</a>
+        <img id="imgUrls"src="${element.img_url}" alt="">
+        <h4     class="NamesCof" ><b>${element.brand}</b> <br> <p id="size">Paquete de café, 250 gr</p></h4>
+        <b><p id="priceCest">${element.quantity * element.price},00€</p></b>
+        
         </div>
+        
         `
-        // products.appendChild(cart3)
+        // cart3.appendChild(cart2)
         products.appendChild(cart2)
-        })  
+    })  
 
 }
     productsCest()
@@ -83,24 +75,3 @@ function productsCest(text) {
         totalPrice += ele.quantity * ele.price
         envio += ele.quantity * ele.price
     })
-////////////
-    // productStorage.forEach(ele => {
-    //     totalPrice += ele.quantity * ele.price
-    //     envio += ele.quantity * ele.price
-    // })
-
-    // if (gratis.checked) {
-
-    //     text = "GRATIS"
-    //     pricesStorage.push(envio)
-        
-    // }
-    // if (paid.checked) {
-
-    //     text = "9,00€"
-    //     envio += 9
-    //     pricesStorage.push(envio)
-
-    // }
-
-    // let IVA = envio - (envio / 1.21)
