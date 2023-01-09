@@ -19,6 +19,10 @@ padding: 0%;
     display: contents;
 }
 
+.borderBottom{
+    border-bottom: #000000 solid 1px;
+    display: -webkit-inline-box;
+}
 #masMenos {
     width: 30px;
     margin: 12px;
@@ -40,6 +44,47 @@ padding: 0%;
    #buttonsJava{
     width: 10px;
    }
+
+
+
+#moveToC{
+    margin-top: -210px;
+    margin-left: 25px;
+}
+
+#cestaCesta3{
+margin-top: 5px;
+    display: flex;
+    position: relative;
+    margin-left: 1100px;
+    width: 600px;
+    background: rgba(227, 222, 215, 0.3);
+    border-radius: 6px;
+   }
+
+#cestaCesta{
+
+    display: -webkit-box;
+    position: relative;
+    margin-left: 1200px;
+    /* bottom: 350px; */
+    top: -350px;
+    width: 600px;
+    background: rgba(227, 222, 215, 0.3);
+    border-radius: 6px;
+   }
+
+   #cestaFin{
+    z-index: 1;
+    position: absolute;
+    right: 1400px;
+    top: 150px;
+    width: 400px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 6px;
+   }
+
 #cart2{
    z-index: 1;
     position: absolute;
@@ -56,7 +101,19 @@ padding: 0%;
     
      
 }
+
+#minusBot{
+    margin-top: -370px;
+}
+
+.borderBottomC{
+    border-bottom: #000000 solid 1px;
+    display: inline;
+}
  
+.borderBottom{
+    border-bottom: #000000 solid 1px;
+}
 #bagsCesta{
     width: 102px;
     margin-top: 10px;
@@ -65,7 +122,7 @@ padding: 0%;
 
 #quitar{
     width: 70px;
-    margin: 5px;
+    /* rgin-left: 15px; */
     color: #ffffff;
     border-radius: 0.4em;
     background: #2A5B45;
@@ -73,12 +130,12 @@ padding: 0%;
     transition: all .3s;
     box-shadow: 6px 6px 12px #c5c5c5,
         -6px -6px 12px #ffffff;
-        margin-left: 20px;
+        margin-left: 55px;
         margin-top: 10px;
 }
 
 #btnDeletes{
-    display: none;
+    /* display: none; */
     width: 125px;
     margin: 5px;
     color: #ffffff;
@@ -156,6 +213,18 @@ header li a {
     color: white;
 }
 
+#addd{
+    text-decoration: none;
+    background-color:#2A5B45B3;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    width: 12px;
+    border-bottom: #000000 solid 1px;
+}
+
+
 .add{
     text-decoration: none;
     background-color:#2A5B45B3;
@@ -163,8 +232,15 @@ header li a {
     border: none;
     border-radius: 4px;
     color: white;
+    
 }
 
+
+#targetCafe{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
 .submit{
     text-decoration: none;
     background-color:#2A5B45B3;
@@ -173,6 +249,10 @@ header li a {
     border-radius: 4px;
     color: white;
     width: 100px;
+}
+
+#margenArr{
+    margin-top: 50px;
 }
 
 .add:hover{
@@ -190,6 +270,29 @@ header li a {
     display: flex;
     margin-top: 4%;
     margin-left: 50px;
+}
+
+
+#inicioCe {
+    list-style: none;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    display: flex;
+    list-style: none;
+    color: white;
+    padding: 5px;
+margin-top: 5px;
+}
+
+#inicioC {
+    list-style: none;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+margin-top: 5px;
 }
 
 #inicio {
@@ -274,8 +377,9 @@ margin-right: 100px;
 
 
 
+
 section {
-    background: rgba(227, 222, 215, 0.3);
+    /* background: rgba(227, 222, 215, 0.3); */
     width: 100%;
 }
 
@@ -378,17 +482,19 @@ section {
     margin-left: 100px;
 }
 .box-3 {
-    width: 280px;
+    width: 390px;
     height: 390px;
     padding: 20px;
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    margin: 0 10px;
+    margin: 130 0px;
     border: 1px solid #E3DED7;
     border-radius: 8px;
     transition: 1s background;
-    margin: 0 25px;
+    
+    margin-top: 10px;
+    margin-left: 50px;
 }
 
 .box-3:hover{
@@ -399,11 +505,100 @@ section {
     justify-content: center;
 }
 
+#margenn{
+    margin-left: 45%;
+}
+
+
+.sectionCheck{
+    
+        width: 100%;
+        height: 550px;
+        display:inline-table;
+        padding: 20px;
+        border: 1px solid #000000;
+        /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+        background-color: whitesmoke;
+        
+    
+}
+
+.sectionCheckk{
+    
+    width: 100%;
+    height: 550px;
+    display:inline-table;
+    padding: 20px;
+    border: 1px solid #000000;
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+    
+    
+
+}
+
+.margenCheck{
+    margin-left: 30px;
+    
+}
+
+
+
+
+.section3-c {
+    width: 100%;
+    height: 550px;
+    display:inline-table;
+    padding: 20px;
+    border: 1px solid #000000;
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+    
+}
+#imgUrls{
+    height: 120px;
+    margin-bottom: 15px;
+}
+#priceC{
+    margin-left: 180px;
+    
+}
+#units{
+    margin-left: 180px;
+    margin-top: -100px;
+}
+
+#displayCe{
+    display: flex;
+    margin-bottom: 20px;
+    
+}
+
+#margenes3{
+    margin-left: 500px;
+    display: block;
+    position: absolute;
+}
+
+
+#displayChe{
+    display: flex;
+
+    
+}
+.section3-c h5 {
+    width: 120px;
+    height: 20px;
+    margin-left: 45%;
+    font-size: 24px;
+    color: #2A5B45;
+    box-shadow: 10px;
+}
+
 .section3 {
     width: 100%;
     padding: 20px;
     border: 1px solid #000000;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
 }
 
 .section3 h2 {
@@ -773,6 +968,21 @@ margin: 50px 80px;
 list-style: none;
 color: white;
 display: block;
+}
+
+#footer-feetC{
+    background-color: #515051 ;
+    width: 102%;
+    height: 30px;
+    align-items: center;
+    margin-left: -12px;
+}
+
+#footer-feetC p{
+    color: white;
+    margin-top: 180px;
+    text-align: center;
+
 }
 
 #footer-feet{
